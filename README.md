@@ -13,7 +13,7 @@
 - `main.py` : transform JSON data into csv
 - `fetch_company_data.ipynb` : get company data via `yfinance`
 ## model
-- `run_similarity.ipynb` : get cosine similarity index and transform data into quantifiable metrics
+- `run_similarity.ipynb` : perform vector encoding with `mpnetv2` and get cosine similarity index and transform data into quantifiable metrics
 ## notebooks
 - `eda.ipynb` : run EDA on scopus data for project ideas
 - `viz1.ipynb` : a derivative of app module to get deeper answers
