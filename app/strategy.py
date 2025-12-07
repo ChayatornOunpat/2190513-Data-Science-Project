@@ -134,7 +134,7 @@ col1, col2, col3, col4 = st.columns(4)
 with col1: st.metric("Companies Analyzed", f"{len(df_viz)}")
 with col2: st.metric("Avg Alignment Score", f"{df_viz['total_alignment_score'].mean():.2f}")
 with col3: st.metric("Total Market Value", f"฿{df_viz['market_cap'].sum():,.0f}")
-with col4: st.metric("High Alignment Companies (Z > 1)", len(df_viz[df_viz["total_alignment_score"] > 1]))
+with col4: st.metric("High Alignment Companies", len(df_viz[df_viz["total_alignment_score"] > 1]))
 
 
 
@@ -223,7 +223,7 @@ df_viz['hover_content'] = df_viz.apply(build_hover_content, axis=1)
 
 with tab1:
     st.subheader(f"Market Alignment Map: {selected_sector}")
-    st.caption("Box Size → Market Cap | Color → Research Fit (Z-Score)")
+    st.caption("Box Size → Market Cap | Color → Research Fit")
     
     def wrap_labels(text, width=15):
         return "<br>".join(textwrap.wrap(str(text), width=width))
